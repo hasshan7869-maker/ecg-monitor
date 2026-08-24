@@ -3,9 +3,6 @@
 A single-lead ECG monitor: electrodes → analog front-end → PIC24 microcontroller
 → live scrolling waveform in MATLAB, hospital-monitor style.
 
-![Live ECG waveform](Screenshot 2026-08-23 115538.png)
-![Breadboard setup](<img width="1874" height="1405" alt="image" src="https://github.com/user-attachments/assets/5f09cefc-b620-442f-adcb-f26c736dbe1b" />)
-
 ## Signal Path
 
 ```
