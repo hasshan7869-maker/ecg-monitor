@@ -1,0 +1,9 @@
+ECG-Monitor.mc3
+ECGMonitorV8.8.cof
+ECGMonitorV8.8.hex
+ECGMonitorV8.8.map
+ECGMonitorV8.8.mcp
+main.c
+mainV8.o
+Makefile
+mcc-manifest-autosave.yml
