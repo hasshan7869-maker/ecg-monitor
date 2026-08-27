@@ -160,3 +160,39 @@ Git was installed.
 the command line and also from 3rd-party software"** on the PATH screen, then
 fully closed and reopened the terminal (PATH changes don't apply to
 already-open terminal windows).
+
+---
+
+## MPLAB 8 build failing with no error text at all
+
+**Problem:** Build failed instantly (same-second start/fail timestamps), with
+zero compiler error text ever appearing in the Output window — across multiple
+different project/file setups.
+
+**Cause:** Windows Security had the toolchain app blocked/quarantined, so the
+compiler was never actually running — MPLAB 8's IDE doesn't clearly surface
+this as a security block, it just shows a generic build failure with no
+detail.
+
+**Fix:** Allowed the app through Windows Security. (Running the exact compiler
+command directly in Command Prompt, copied from the IDE's log, is a good way
+to confirm whether a "silent" build failure is a real compiler error or the
+IDE swallowing output — worth doing early next time this happens.)
+
+---
+
+## Noisy ECG signal — mains interference from the laptop charger
+
+**Problem:** Live waveform showed a thick, fuzzy high-frequency noise band
+riding on top of the real signal, on top of a few large motion-artifact-style
+spikes. Electrodes were suspected first (they were old).
+
+**Cause:** The laptop was plugged into its charger during recording. With a
+simple 3-pin AD8232 module (no right-leg-drive circuit to actively cancel
+common-mode noise), the circuit was picking up 60Hz mains interference,
+likely via a ground loop through the USB connection.
+
+**Fix:** Unplugged the laptop charger and ran on battery power only during
+recording. Dramatically cleaned up the waveform — clear, well-defined QRS
+complexes visible afterward. Electrode age turned out not to be the main
+issue.
