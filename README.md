@@ -1,7 +1,8 @@
 # Real-Time ECG Monitor — PIC24FJ64GA002 + MATLAB
 
 A single-lead ECG monitor: electrodes → analog front-end → PIC24 microcontroller
-→ live scrolling waveform in MATLAB, hospital-monitor style.
+→ live scrolling waveform in MATLAB with real-time BPM detection, hospital-monitor
+style. Also includes a custom PCB layout (KiCad) for the full circuit.
 
 ![image alt](https://github.com/hasshan7869-maker/ecg-monitor/blob/248d5862b38528553bc88ccba0183d2b40fbb9bb/Media/20260823_122118.jpg)
 ![image alt](https://github.com/hasshan7869-maker/ecg-monitor/blob/248d5862b38528553bc88ccba0183d2b40fbb9bb/Media/Screenshot%202026-08-23%20115538.png)
@@ -30,7 +31,7 @@ Electrodes → AD8232 (analog front-end) → PIC24FJ64GA002 (ADC + UART)
 ## Getting Started
 
 **1. Flash the firmware**
-Open `mainV8.c` in MPLAB v8.80 as a Standalone Project (device:
+Open `main.c` in MPLAB v8.80 as a Standalone Project (device:
 PIC24FJ64GA002, toolsuite: Microchip C30). Set Configuration Bits
 (Oscillator = FRC, Watchdog = Disabled, JTAG = Disabled), build, and program
 via the chipKIT PGM.
@@ -42,7 +43,7 @@ Manager, update `COM_PORT` in `ecg_live_plot.m`, and run it in MATLAB.
 ## Repository Structure
 
 ```
-├── mainV8.c                # PIC24 firmware
+├── main.c                # PIC24 firmware
 ├── ecg_live_plot.m       # MATLAB live plot script
 ├── images/
 ├── TROUBLESHOOTING.md    # Every build issue hit, and how it was fixed
@@ -52,12 +53,15 @@ Manager, update `COM_PORT` in `ecg_live_plot.m`, and run it in MATLAB.
 ## Limitations
 
 Single-lead only, no leads-off detection, built for educational/portfolio
-purposes — not a medical device.
+purposes — not a medical device. Signal quality is sensitive to interference
+from nearby AC power sources (e.g. a laptop charger) — best results running
+on battery power only.
 
-## Roadmap
+## Completed / Roadmap
 
-- [ ] Move to a custom PCB (KiCad)
-- [ ] Real-time BPM via QRS/peak detection in MATLAB
+- [x] Custom PCB layout (KiCad)
+- [x] Real-time BPM via QRS/peak detection in MATLAB
+- [ ] Manufacture and populate the PCB
 - [ ] Digital filtering (baseline drift, 50/60Hz notch)
 
 ---
