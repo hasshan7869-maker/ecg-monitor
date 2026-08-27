@@ -4,8 +4,18 @@ A single-lead ECG monitor: electrodes → analog front-end → PIC24 microcontro
 → live scrolling waveform in MATLAB with real-time BPM detection, hospital-monitor
 style. Also includes a custom PCB layout (KiCad) for the full circuit.
 
-![image alt](https://github.com/hasshan7869-maker/ecg-monitor/blob/248d5862b38528553bc88ccba0183d2b40fbb9bb/Media/20260823_122118.jpg)
+
 ![image alt](https://github.com/hasshan7869-maker/ecg-monitor/blob/248d5862b38528553bc88ccba0183d2b40fbb9bb/Media/Screenshot%202026-08-23%20115538.png)
+![image alt](https://github.com/hasshan7869-maker/ecg-monitor/blob/248d5862b38528553bc88ccba0183d2b40fbb9bb/Media/20260823_122118.jpg)
+
+## Schematic + PCB Layouts
+![image alt](https://github.com/hasshan7869-maker/ecg-monitor/blob/6c84f99e352572562690b4e1d51c772517148115/Media/Screenshot%202026-08-27%20190401.png)
+![image alt](https://github.com/hasshan7869-maker/ecg-monitor/blob/6c84f99e352572562690b4e1d51c772517148115/Media/Screenshot%202026-08-27%20190401.png)
+![image alt](https://github.com/hasshan7869-maker/ecg-monitor/blob/6c84f99e352572562690b4e1d51c772517148115/Media/Screenshot%202026-08-27%20192725.png)
+
+
+![image alt](https://github.com/hasshan7869-maker/ecg-monitor/blob/6c84f99e352572562690b4e1d51c772517148115/Media/ECGplusBPM.webp)
+'ECG + BPM using cheaper electrodes'
 
 ## Signal Path
 
