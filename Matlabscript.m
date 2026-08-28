@@ -8,7 +8,7 @@ WINDOW_SECONDS = 5;
 SAMPLE_RATE_HZ = 250;  % 250 samples per second (1 sample every 4ms)
 
 % 2. BPM Tracking Variables
-threshold = 750;       % ADJUST THIS: The line height a spike must cross to count as a beat
+threshold = 850;       % ADJUST THIS: The line height a spike must cross to count as a beat
 lastPeakIndex = 0;     % Stores the sample index of the last heartbeat
 cooldownSamples = 50;  % Ignore new spikes for 50 samples (0.2 seconds) after a beat
 currentBPM = 0;
