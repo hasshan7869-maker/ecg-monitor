@@ -10,7 +10,6 @@ style. Also includes a custom PCB layout (KiCad) for the full circuit.
 
 ## Schematic + PCB Layouts
 ![image alt](https://github.com/hasshan7869-maker/ecg-monitor/blob/6c84f99e352572562690b4e1d51c772517148115/Media/Screenshot%202026-08-27%20190401.png)
-![image alt](https://github.com/hasshan7869-maker/ecg-monitor/blob/6c84f99e352572562690b4e1d51c772517148115/Media/Screenshot%202026-08-27%20190401.png)
 ![image alt](https://github.com/hasshan7869-maker/ecg-monitor/blob/6c84f99e352572562690b4e1d51c772517148115/Media/Screenshot%202026-08-27%20192725.png)
 
 
